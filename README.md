@@ -42,15 +42,26 @@ To participate, you must be:
 
 # Assignment
 
-## TASK-TITLE
+## Duplicate character remover
 
 ### Task instructions
 
-&lt;!--- Use this section to describe the project that students are required to complete. We ask that you also include instructions on running and preparing the students' local environment if necessary. --->
+Develop an app in reactjs, with two screens.
+- Screen 1: Provide an input field and a button with text 'Submit'. 
+    - User should be able to put in any value in the input field. Clicking on the button should redirect user to screen 2. 
+    - If input field is empty or only has space characters, user should be shown an alert asking to provide a non empty value and don't take user to screen 2 in this case.
+
+- Screen 2: Iterate over each character of the string and render them as card on ui. Each card should have the character, and a delete icon on top. Clicking on delete should delete all duplicate instances of the character in the string. Leaving only the clicked instance of the character. 
+    - Cards for same characters should have the same background color. 
+    - If there are no more character with more than 1 appearance in the string. Render a success header. Also show the original string and the new resulted string. And provide a back button to go back to screen 1. If user goes back to screen 1, input field should be cleared/empty.
 
 ### Task Expectations
 
-&lt;!--- Please add expectations that students need to follow to be considered. Some examples include: completing the project on their own, not using code from external resources without comprehending the logic, etc.  --->
+- User shouldn't be allowed to go to screen 2 without providing a non-empty value in the input field on screen 1.
+- On screen 2, clicking on a card delete icon should delete all other appearance of the character in the string. Cards shown on the screen should also be updated. Let's say if the original string is `aabcaccda`. Clicking on first `a` should leave the string as `abcccd`. Let's say the original string is `baebdeb`. Clicking on the character `b` at index 3 (0 index), should result in `aebde`.
+- Once all duplicate appearances in the string are removed user should see a success header with original string & the new string.
+- The project should be written in Js or Typescript with React. Feel free to use any component library, any other packages, css libraries etc. *Your time is better utilised solving the actual problem rather than re-inventing the wheel.*
+- Write a readme & a PR description on how to run the project locally.
 
 ### Task submission
 
@@ -64,4 +75,5 @@ Students are expected to use the [GitHub Flow](https://docs.github.com/en/get-st
 
 ### Resources
 
-&lt;!--- Use this section to add resources for students to refer to. For example Documentation, Tutorials, Guides, and more.  --->
+- [React - Getting started](https://reactjs.org/docs/getting-started.html)
+
