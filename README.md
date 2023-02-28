@@ -76,4 +76,5 @@ Students are expected to use the [GitHub Flow](https://docs.github.com/en/get-st
 ### Resources
 
 - [React - Getting started](https://reactjs.org/docs/getting-started.html)
+- [Create-react-app](https://create-react-app.dev/)
 
