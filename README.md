@@ -1,3 +1,12 @@
+# Submission for Octernship Assignment for Houseware
+## Submitted by [Ravikisha](https://github.com/ravikisha)
+
+### Run the project
+  - clone the repo
+  - run `npm install`
+  - run `npm start`
+  - go to `http://localhost:3000/`
+
 ## Houseware
 
 ### Company information 
@@ -82,4 +91,6 @@ Students are expected to use the [GitHub Flow](https://docs.github.com/en/get-st
 
 - [React - Getting started](https://reactjs.org/docs/getting-started.html)
 - [Create-react-app](https://create-react-app.dev/)
+
+
 
