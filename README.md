@@ -74,9 +74,12 @@ Develop an app in reactjs, with two screens.
 
 Students are expected to use the [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow) when working on their project. 
 
-1. Making changes on the auto generated `feedback` branch to complete the task
-2. Using the auto generated **Feedback Pull Request** for review and submission
-3. Using GitHub Discussions to ask any relevant questions regarding the project
+1. Please push your final code changes to your main branch
+2. Please add your instructions/assumptions/any other remarks in the beginning of the Readme file and the reviewers will take a look
+3. The PR created called Feedback will be used for sharing any feedback/asking questions by the reviewers, please make sure you do not close the Feedback PR.
+The assignment will be automatically submitted on the "Assignment Deadline" date -- you don't need to do anything apart from what is mentioned above.
+4. Using GitHub Issues to ask any relevant questions regarding the project
+
 
 ### Resources
 
