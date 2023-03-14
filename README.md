@@ -1,3 +1,12 @@
+# Submission for Octernship Assignment for Houseware
+## Submitted by [Ravikisha](https://github.com/ravikisha)
+
+### Run the project
+  - clone the repo
+  - run `npm install`
+  - run `npm start`
+  - go to `http://localhost:3000/`
+
 ## Houseware
 
 ### Company information 
@@ -85,4 +94,6 @@ The assignment will be automatically submitted on the "Assignment Deadline" date
 
 - [React - Getting started](https://reactjs.org/docs/getting-started.html)
 - [Create-react-app](https://create-react-app.dev/)
+
+
 
