@@ -1,38 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  padding: 2rem 1rem;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  display: grid;
+  gap: 8px;
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem 0;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+small {
+  position: absolute;
+  top: 0.5rem;
+  color: red;
 }
 
-.App-link {
-  color: #61dafb;
+.form-error input {
+  border: 1px solid red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.output {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  padding-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #555;
+  width: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.btn-delete {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
 }
