@@ -2,6 +2,8 @@
 
 The project is a web application that allows users to enter a string and see a representation of the string as a set of cards, with each card representing a character in the string. The cards have a delete icon that allows users to remove all other instances of the same character from the list of cards except the one clicked. If there are no duplicates left in the list of cards, a "check" button is displayed to indicate success. The user can navigate back to the input page using a back button.
 
+Open [https://play-with-string.netlify.app/] to view website.
+
 
 ## Purpose
 
