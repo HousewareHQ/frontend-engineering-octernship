@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import { Input, Output } from "./Routes.js";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [input, setInput] = useState("");
+  const [originalInput, setOriginalInput] = useState("");
+  const [output, setOutput] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Duplicate Remover</h1>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Input
+              input={input}
+              setInput={setInput}
+              setOutput={setOutput}
+              setOriginalInput={setOriginalInput}
+            />
+          }
+        />
+        <Route
+          path="/result"
+          element={
+            <Output
+              output={output}
+              setOutput={setOutput}
+              originalInput={originalInput}
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 }
