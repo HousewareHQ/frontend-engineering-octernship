@@ -1,38 +1,205 @@
-.App {
+.home__main {
+  background-color: var(--white);
+  padding: 2rem;
+  box-shadow: var(--shadow-2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  margin: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home__main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.home__main input {
+  display: block;
+  margin: 1.5rem 0;
+  width: 40rem;
+  height: 3rem;
+  padding: 0.5rem;
+  border: 0;
+  background-color: var(--grey-100);
+  box-shadow: var(--shadow-1);
+  font-size: 1.5rem;
+  border-radius: 3px;
+}
+.home__main input:invalid {
+  outline: 2px solid red;
+}
+.home__main input:focus {
+  outline: 2px solid var(--grey-400);
+}
+.home__main input:not(:focus) {
+  background-color: var(--grey-100);
+  outline: 2px solid var(--grey-300);
+}
+.home__main input::placeholder {
+  font-size: 1.3rem;
+  color: var(--grey-400);
+}
+@media (max-width: 768px) {
+  .home__main input {
+    height: 2.5rem;
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* Modal */
+#modal button {
+  font-size: 0.8rem;
+}
+
+#modal section {
+  display: flex;
+}
+#modal h4 {
+  margin: 0.5rem 0 1rem 0;
+}
+#modal .warning__icon svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+  color: rgb(241, 189, 60);
+  padding: 0.3rem;
+  background-color: rgb(246, 231, 196);
+  border-radius: 50%;
+}
+
+#modal {
+  background-color: rgba(15, 15, 15, 0.599);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal:empty {
+  display: none;
+}
+#modal .warning__modal, .output__modal{
+  max-width: 500px;
+  padding: 1.3rem 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-3);
+  margin: 1rem;
+}
+.warning__modal {
+  background: #faeff0;
+}
+.warning__modal button {
+  background-color: var(--red-dark);
+}
+
+
+/* Output */
+.output__section .output__header {
+  margin-top: 2.5rem;
+}
+.output__section h3 {
+  /* font-size: 1.75rem; */
+  text-align: center;
+  color: var(--primary-600);
+}
+.output__section h3 span {
+  color: #e63946;
+}
+.output__header {
+  text-align: center;
+}
+
+
+/* Cards */
+.cards {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .cards {
+    margin-top: 2rem;
+  }
+}
+.card {
+  width: calc(100% / 4);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  border-radius: var(--borderRadius);
+  padding: 1.5rem;
+}
+.card .font {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.5rem;
+}
+.card button {
+  margin-bottom: 1rem;
+  background: var(--red);
+}
+.card__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  width: 100%;
+  box-shadow: var(--shadow-2);
 }
-
-.App-link {
-  color: #61dafb;
+.card__inner:hover {
+  box-shadow: var(--shadow-3);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 480px) {
+  .card {
+    padding: .5rem;
+  }
+}
+
+
+/* Output Modal */
+.output__modal {
+  background-color: var(--grey-100);
+}
+.output__modal .show__btn {
+  background: var(--red-dark);
+}
+.greentick__icon svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+  padding: 0.2rem;
+  background-color: rgba(133, 207, 64, 0.314);
+  border-radius: 50%;
+}
+.output__modal .btns {
+  display: flex;
+  gap: 1rem;
+}
+.sucess__btn {
+  background-color: var(--success-dark);
+}
+.output__modal p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #modal svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: .5rem;
   }
 }
