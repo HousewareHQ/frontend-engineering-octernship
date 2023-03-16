@@ -44,18 +44,46 @@ small {
   gap: 1rem;
 }
 
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 0;
+}
+
+.success {
+  box-shadow: 0 0 2px 1px green;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: green;
+  font-weight: 600;
+  background-color: rgb(240, 255, 250);
+}
+
 .card {
-  padding: 1rem;
-  padding-top: 2rem;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px #555;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 1px green;
   width: 70px;
   position: relative;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .btn-delete {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-delete:hover {
+  filter: saturate(200);
+  cursor: pointer;
+}
+
+.btn-delete img {
+  width: 100%;
 }

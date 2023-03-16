@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import deleteIcon from "./assets/delete.svg";
 
 export const Input = ({ input, setInput, setOutput }) => {
   const [error, setError] = useState(null);
@@ -29,6 +30,7 @@ export const Input = ({ input, setInput, setOutput }) => {
       return;
     }
     setOutput(data);
+    setInput("");
     navigate("result");
   };
 
@@ -47,6 +49,24 @@ export const Input = ({ input, setInput, setOutput }) => {
 };
 
 export const Output = ({ output, setOutput }) => {
+  const [success, setSuccess] = useState(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (output.length === 0) navigate("/");
+    const uniqueOutput = [...new Set(output)];
+
+    if (output.join() === uniqueOutput.join()) {
+      setSuccess("Yay, you've got no duplicates");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [output]);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setSuccess("");
+  //   }, 3000);
+  // }, [success]);
+
   const handleDelete = (letter, idx) => {
     const newOutput = output.filter((i, id) =>
       i === letter ? id === idx && i : i
@@ -64,16 +84,40 @@ export const Output = ({ output, setOutput }) => {
     // Prevent state update if the outputs are the same, I did this to avoid rerun of useEffect
     output.join() !== newOutput.join() && setOutput(newOutput);
   };
+
+  const styleDuplicate = (i) => {
+    const similar = output.filter((e) => e === i);
+
+    if (similar.length > 1)
+      return {
+        background: "#f9e3c1",
+      };
+
+    return {
+      background: "rgb(240, 255, 250)",
+    };
+  };
+
   return (
-    <div className="output">
-      {output.map((i, idx) => (
-        <div className="card" key={idx}>
-          <button className="btn-delete" onClick={(e) => handleDelete(i, idx)}>
-            x
-          </button>
-          <p>{i}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="top">
+        <Link to="/" className="back-btn">
+          <img src={deleteIcon} alt="" />
+        </Link>
+
+        {success && <p className="success">{success}</p>}
+      </div>
+
+      <div className="output">
+        {output.map((i, idx) => (
+          <div className="card" key={idx} style={styleDuplicate(i)}>
+            <i className="btn-delete" onClick={(e) => handleDelete(i, idx)}>
+              <img src={deleteIcon} alt="delete" />
+            </i>
+            <p>{i}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };

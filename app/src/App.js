@@ -1,19 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { Input, Output } from "./Routes.js";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState([]);
-
-  useEffect(() => {
-    const uniqueOutput = [...new Set(output)];
-
-    if (output.join() === uniqueOutput.join()) {
-      console.log("Yayyy");
-    }
-  }, [output]);
 
   return (
     <div className="App">
