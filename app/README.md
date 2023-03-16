@@ -1,10 +1,24 @@
-# Getting Started with Create React App
+# Duplicate Character Remover
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project is a web application that allows users to enter a string and see a representation of the string as a set of cards, with each card representing a character in the string. The cards have a delete icon that allows users to remove all other instances of the same character from the list of cards except the one clicked. If there are no duplicates left in the list of cards, a "check" button is displayed to indicate success. The user can navigate back to the input page using a back button.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Purpose
+
+The purpose of this project is to provide a simple and intuitive way for users to see the unique characters in a given string and easily delete duplicates.
+
+## Technologies
+This project was bootstrapped with Create React App.
+
+## Target Audience
+The target audience for this project is anyone who needs to quickly and easily remove duplicates from a string.
+
+## Features
+Enter a string on the input page.\
+Display a set of cards on the show page, each representing a unique character in the string.\
+Cards have a delete icon that removes all other instances of the same character except the clicked one.\
+If there are no duplicates left, a "check" button is displayed.\
+Users can navigate back to the input page using a back button
 
 ### `npm start`
 
