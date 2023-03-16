@@ -5,6 +5,7 @@ import { useState } from "react";
 
 function App() {
   const [input, setInput] = useState("");
+  const [originalInput, setOriginalInput] = useState("");
   const [output, setOutput] = useState([]);
 
   return (
@@ -14,12 +15,23 @@ function App() {
         <Route
           path="/"
           element={
-            <Input input={input} setInput={setInput} setOutput={setOutput} />
+            <Input
+              input={input}
+              setInput={setInput}
+              setOutput={setOutput}
+              setOriginalInput={setOriginalInput}
+            />
           }
         />
         <Route
           path="/result"
-          element={<Output output={output} setOutput={setOutput} />}
+          element={
+            <Output
+              output={output}
+              setOutput={setOutput}
+              originalInput={originalInput}
+            />
+          }
         />
       </Routes>
     </div>

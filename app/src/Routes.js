@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import deleteIcon from "./assets/delete.svg";
+import backBtn from "./assets/arrow-right.svg";
 
-export const Input = ({ input, setInput, setOutput }) => {
+export const Input = ({ input, setInput, setOutput, setOriginalInput }) => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -30,6 +31,7 @@ export const Input = ({ input, setInput, setOutput }) => {
       return;
     }
     setOutput(data);
+    setOriginalInput(input.toLowerCase());
     setInput("");
     navigate("result");
   };
@@ -48,7 +50,7 @@ export const Input = ({ input, setInput, setOutput }) => {
   );
 };
 
-export const Output = ({ output, setOutput }) => {
+export const Output = ({ output, setOutput, originalInput }) => {
   const [success, setSuccess] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
@@ -60,12 +62,6 @@ export const Output = ({ output, setOutput }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [output]);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setSuccess("");
-  //   }, 3000);
-  // }, [success]);
 
   const handleDelete = (letter, idx) => {
     const newOutput = output.filter((i, id) =>
@@ -88,24 +84,36 @@ export const Output = ({ output, setOutput }) => {
   const styleDuplicate = (i) => {
     const similar = output.filter((e) => e === i);
 
-    if (similar.length > 1)
-      return {
-        background: "#f9e3c1",
-      };
-
-    return {
-      background: "rgb(240, 255, 250)",
-    };
+    return similar.length > 1
+      ? {
+          background: "rgb(255 67 67)",
+        }
+      : {
+          background: "rgb(240, 255, 250)",
+        };
   };
 
   return (
     <>
       <div className="top">
         <Link to="/" className="back-btn">
-          <img src={deleteIcon} alt="" />
+          <img src={backBtn} alt="" />
         </Link>
 
         {success && <p className="success">{success}</p>}
+      </div>
+
+      <div className="message">
+        {success && (
+          <>
+            <p>
+              <b>Original Input:</b> {originalInput}
+            </p>
+            <p>
+              <b>Result: </b> {output.join("")}
+            </p>
+          </>
+        )}
       </div>
 
       <div className="output">

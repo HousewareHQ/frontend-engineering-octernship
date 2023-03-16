@@ -6,6 +6,8 @@
 
 .App {
   padding: 2rem 1rem;
+  max-width: 700px;
+  margin: auto;
 }
 
 h1 {
@@ -40,6 +42,7 @@ small {
 .output {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   padding: 1rem;
   gap: 1rem;
 }
@@ -77,13 +80,25 @@ small {
   border: none;
   width: 16px;
   height: 16px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.card:hover .btn-delete {
+  opacity: 1;
 }
 
 .btn-delete:hover {
   filter: saturate(200);
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .btn-delete img {
   width: 100%;
+}
+
+.message {
+  min-height: 40px;
+  padding: 0.5rem;
 }

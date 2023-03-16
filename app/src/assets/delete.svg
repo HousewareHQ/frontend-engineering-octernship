@@ -1,12 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <defs id="defs3051">
-    <style type="text/css" id="current-color-scheme">
-        .ColorScheme-NegativeText {
-            color:#da4453;
-        }
-        </style>
-  </defs>
-  <g transform="translate(1,1)">
-    <path style="fill:currentColor;fill-opacity:1;stroke:none" class="ColorScheme-NegativeText" d="M8 3v2h1V4h4v1h1V3H8M4 6v1h14V6H4m2 2v11h10V8h-1v10H7V8H6"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="feather feather-trash-2" width="24" height="24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <polyline points="3 6 5 6 21 6"/>
+ <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+ <line x1="10" x2="10" y1="11" y2="17"/>
+ <line x1="14" x2="14" y1="11" y2="17"/>
 </svg>
