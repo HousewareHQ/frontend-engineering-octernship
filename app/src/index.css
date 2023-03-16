@@ -211,10 +211,10 @@ main {
 }
 
 .btn--primary {
-  background: var(--primary-color);
+  background: var(--primary-dark);
 }
 .btn--primary:hover {
-  background: var(--primary-dark);
+  background: var(--primary-color);
 }
 .btn--success {
   background: var(--success-dark);

@@ -53,7 +53,9 @@ const Output = () => {
         <h3>
           Edited Text : <span>{charArray}</span>
         </h3>
-        <button className="btn btn--success">Back to Home</button>
+        <Link to="/">
+          <button className="btn btn--success">Back to Home</button>
+        </Link>
       </header>
 
       {showModal && <OutputModal setShowModal={setShowModal} />}
