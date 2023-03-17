@@ -64,6 +64,9 @@ form{
   padding: 2ch;
   box-sizing: border-box;
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .close-btn{
@@ -74,4 +77,46 @@ form{
   z-index: 10;
   border: none;
   font-size: 2rem;
+}
+
+.letter-card{
+  width: 9ch;
+  height: 9ch;
+  background-color: rgba(255, 255, 255, 0.299);
+  border-radius: 1ch;
+  margin: 0.5ch;
+  padding: 0.5ch;
+  box-sizing: border-box;
+}
+
+.letter-card>span{
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+}
+
+.letter-card>button{
+  width: 100%;
+  border: 1px white solid;
+  border-radius: 1ch;
+  background: rgb(214, 96, 96);
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.notification {
+  width: 100%;
+  height: 90vh;
+  /* opacity: 0.75; */
+  background-color: rgba(6, 112, 24, 1);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1ch;
+  box-sizing: border-box;
+  text-align: center;
+  /* pointer-events: none; */
 }
