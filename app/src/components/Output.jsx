@@ -7,9 +7,9 @@ import GreenTickIcon from "../assets/GreenTickIcon";
 
 const Output = () => {
   const { text } = useParams();
-  // const charArray = [...text];
   const [charArray, setCharArray] = useState([...text]);
   const [showModal, setShowModal] = useState(false);
+  const set = new Set(charArray);
 
   const deleteDuplicateLetter = (charArray, char) => {
     let result = [];
@@ -27,14 +27,15 @@ const Output = () => {
   };
 
   const checkDuplicateLetter = (charArray) => {
-    for (let i = 0; i < charArray.length; i++) {
-      for (let j = i + 1; j < charArray.length; j++) {
-        if (charArray[i] === charArray[j]) {
+    if (+charArray.length === +set.size) {
+      for (let i = 0; i < charArray.length; i++) {
+        if (!set.has(charArray[i])) {
           return true;
         }
       }
+      return false;
     }
-    return false;
+    return true;
   };
 
   useEffect(() => {
@@ -58,7 +59,13 @@ const Output = () => {
         </Link>
       </header>
 
-      {showModal && <OutputModal setShowModal={setShowModal} />}
+      {showModal && (
+        <OutputModal
+          setShowModal={setShowModal}
+          text={text}
+          charArray={charArray}
+        />
+      )}
 
       <div className="row cards">
         {charArray?.length > 0 &&
@@ -96,7 +103,7 @@ function Card({ char, deleteDuplicateLetter, charArray }) {
   );
 }
 
-function OutputModal({ setShowModal }) {
+function OutputModal({ setShowModal, text, charArray }) {
   return (
     <Modal>
       <section className="output__modal">
@@ -106,6 +113,12 @@ function OutputModal({ setShowModal }) {
         <div>
           <h4>Yeah Hooray ! You did it !🎉</h4>
           <p>You just remove the all duplicate value from the text</p>
+          <div className="output">
+            <h4>Original Text : {text}</h4>
+            <h4>
+              Edited Text : <span className="primary--dark">{charArray}</span>
+            </h4>
+          </div>
           <div className="btns">
             <button
               className="btn show__btn"

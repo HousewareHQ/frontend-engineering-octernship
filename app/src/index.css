@@ -127,7 +127,6 @@ h5 {
   }
   h4 {
     font-size: 1.15rem;
-    /* margin: 0.2rem 0 0.5rem 0; */
   }
   body {
     font-size: 1rem;
@@ -209,7 +208,9 @@ main {
   font-size: 0.9rem;
   padding: 0.2rem 0.6rem;
 }
-
+.primary--dark {
+  color: var(--primary-dark)
+}
 .btn--primary {
   background: var(--primary-dark);
 }

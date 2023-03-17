@@ -174,9 +174,6 @@
 .output__modal {
   background-color: var(--grey-100);
 }
-.output__modal .show__btn {
-  background: var(--red-dark);
-}
 .greentick__icon svg {
   height: 2.5rem;
   width: 2.5rem;
@@ -186,14 +183,17 @@
   border-radius: 50%;
 }
 .output__modal .btns {
+  margin-top: 1.5rem;
+  line-height: 1.2;
   display: flex;
   gap: 1rem;
+  text-align: center;
+}
+.output__modal .show__btn {
+  background: var(--red-dark);
 }
 .sucess__btn {
   background-color: var(--success-dark);
-}
-.output__modal p {
-  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -201,5 +201,11 @@
     width: 2rem;
     height: 2rem;
     margin-right: .5rem;
+  }
+  #modal h4 {
+    margin: 0;
+  }
+  .output__modal .btns {
+    margin-top: 1rem;
   }
 }

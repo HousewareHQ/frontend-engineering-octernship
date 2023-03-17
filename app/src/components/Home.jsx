@@ -7,7 +7,6 @@ import WarningIcon from "../assets/WarningIcon";
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -34,27 +33,31 @@ const Home = () => {
           </button>
         </form>
       </div>
-      {showModal && (
-        <Modal>
-          <section className="warning__modal">
-            <span className="warning__icon">
-              <WarningIcon />
-            </span>
-            <div>
-              <h4>No Input Error</h4>
-              <p>
-                You can&apos;t submit empty text to the output page. Please
-                input some text.
-              </p>
-              <button className="btn" onClick={() => setShowModal(false)}>
-                Cancel
-              </button>
-            </div>
-          </section>
-        </Modal>
-      )}
+      {showModal && <WarningModal setShowModal={setShowModal} />}
     </main>
   );
 };
+
+function WarningModal({ setShowModal }) {
+  return (
+    <Modal>
+      <section className="warning__modal">
+        <span className="warning__icon">
+          <WarningIcon />
+        </span>
+        <div>
+          <h4>No Input Error</h4>
+          <p>
+            You can&apos;t submit empty text to the output page. Please input
+            some text.
+          </p>
+          <button className="btn" onClick={() => setShowModal(false)}>
+            Cancel
+          </button>
+        </div>
+      </section>
+    </Modal>
+  );
+}
 
 export default Home;
