@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.container .Text-box input[type="text"]{
+height: 50px;
+width: 500px;
+background-color: red;
+font-size: 60px;
+border-radius: 10px;
+}
+button[type="submit"]{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+
+    margin: 10px;
+}
