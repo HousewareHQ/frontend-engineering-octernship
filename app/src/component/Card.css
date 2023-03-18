@@ -1,0 +1,29 @@
+.-container{
+    height: 200px;
+    width: 100px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+.inner-cont{
+    background-color: white;
+    height: 160px;
+    width: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cross{
+    display: flex;
+    padding-left: 50px;
+    cursor: pointer;
+}
+.cross:hover{
+    font-size: 20px;
+    
+}
