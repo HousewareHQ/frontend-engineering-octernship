@@ -1,6 +1,6 @@
-import React,{useContext,useEffect} from 'react';
+import React,{useContext} from 'react';
 import './Card.css'
-import BackspaceIcon from '@mui/icons-material/Backspace'
+import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import nodeContext from './nodeContext';
 
 
@@ -17,13 +17,15 @@ const Card = ({value,index,uniqueChar}) => {
       
          const arrstr=tempstr.filter((ele,ind)=>{
            return (
-            ind==i || ele!=e
+            ind===i || ele!==e
            )
         })
          
         console.log(uniqueChar,arrstr.length)
         
         a.setState(arrstr);
+        a.setprevious(tempstr)
+        a.setresultant(arrstr);
         
         console.log(arrstr) 
         
@@ -35,7 +37,11 @@ const Card = ({value,index,uniqueChar}) => {
         }
         
         
-    
+    let col=value.charCodeAt() < 97 ? 65:97
+    if(value.charCodeAt()<65){
+        col=33
+    } 
+    console.log('----->',col)
 
    const items = [  "#915c83",
    "blue",
@@ -60,10 +66,10 @@ const Card = ({value,index,uniqueChar}) => {
     return( <div>
         
         
-        <div className="-container" style={{backgroundColor: items[value.charCodeAt()-97]}}>
+        <div className="-container" style={{backgroundColor: items[value.charCodeAt()-col]}}>
             
                <div className='cross' onClick={()=>handleClick(value,index)}>
-                <BackspaceIcon />
+                < ClearOutlinedIcon/>
                </div>
                <div className="inner-cont">
                <h2>{value}</h2>
