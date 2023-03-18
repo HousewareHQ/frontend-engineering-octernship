@@ -2,7 +2,7 @@
   background-color: var(--white);
   padding: 2rem;
   box-shadow: var(--shadow-2);
-  border-radius: 5px;
+  border-radius: var(--borderRadius);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -26,17 +26,18 @@
   background-color: var(--grey-100);
   box-shadow: var(--shadow-1);
   font-size: 1.5rem;
-  border-radius: 3px;
+  border-radius: var(--borderRadius);
 }
-.home__main input:invalid {
-  outline: 2px solid red;
-}
+
 .home__main input:focus {
   outline: 2px solid var(--grey-400);
 }
 .home__main input:not(:focus) {
   background-color: var(--grey-100);
   outline: 2px solid var(--grey-300);
+}
+.home__main input:invalid {
+  outline: 2px solid red;
 }
 .home__main input::placeholder {
   font-size: 1.3rem;
@@ -90,6 +91,7 @@
   max-width: 500px;
   padding: 1.3rem 1rem;
   border-radius: 10px;
+  border-radius: calc(var(--borderRadius) * 2);
   box-shadow: var(--shadow-3);
   margin: 1rem;
 }
@@ -128,6 +130,7 @@
   .cards {
     margin-top: 2rem;
   }
+  
 }
 .card {
   width: calc(100% / 4);
@@ -136,6 +139,11 @@
   transition: var(--transition);
   border-radius: var(--borderRadius);
   padding: 1.5rem;
+}
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% / 3);
+  }
 }
 .card .font {
   font-size: 2rem;
