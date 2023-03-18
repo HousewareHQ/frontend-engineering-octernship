@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page_one {
   display: flex;
+  margin-top: 40vh;
   flex-direction: column;
+  width: 100vw;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.page_one input {
+  width: 23vw;
+  outline: none;
+  margin-bottom: 1.8vh;
+  border-radius: 5px;
+  padding: 4px 5px;
+  border: 1px solid grey;
+}
+.page_one p {
+  margin-bottom: 1.2vh;
+  opacity: 0;
+  visibility: hidden;
+  animation: error 2s ease-in-out infinite;
+}
+.page_one button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+.page_one button:hover {
+  opacity: 0.65;
+}
+@keyframes error {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.link {
+  position: absolute;
+  top: 2.2vh;
+  left: 5vw;
+  color: grey;
+  text-decoration: none;
+  font-size: large;
+  box-shadow: 3px 7px 10px #888888;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
+.link:hover {
+  opacity: 0.67;
+}
+
+#animate {
+  animation: display 2s ease-in-out 1;
+}
+
+@keyframes display {
   from {
-    transform: rotate(0deg);
+    transform: translateY(-4vh);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(-20vh);
+    opacity: 1;
   }
 }
+.error-p {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  padding: 0 1vw;
+}
+.error-p p {
+  font-size: small;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(230, 228, 228);
+  margin-bottom: 0.5vh;
+}
+
+.page_two {
+  width: 70vw;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  margin: auto;
+  flex-wrap: wrap;
+  transform: translateY(40vh);
+  justify-content: center;
+}
+.page_two .display_text {
+  width: 2.2vw;
+  border-bottom: 1px solid black;
+  position: relative;
+  padding-left: 4px;
+  cursor: pointer;
+}
+.page_two .display_text .span {
+  position: absolute;
+  left: 0.3vw;
+  visibility: hidden;
+  top: -2vh;
+  font-size: small;
+  cursor: pointer;
+  transition: opacity 1s ease-in;
+}
+.page_two .display_text .span .delete {
+  font-size: small;
+  pointer-events: none;
+}
+.page_two .display_text .span:hover {
+  opacity: 1;
+}
+.page_two .display_text:hover .span {
+  visibility: visible;
+}/*# sourceMappingURL=App.css.map */
