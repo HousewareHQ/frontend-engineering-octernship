@@ -1,3 +1,9 @@
+## Instruction....
+
+To run the app,
+do npm install
+then npm start
+
 ## Houseware
 
 ### Company information 
