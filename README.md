@@ -1,8 +1,8 @@
 ## Instruction....
 
-To run the app,
-do npm install
-then npm start
+* To run the app,
+* do npm install
+* then npm start
 
 ## Houseware
 
