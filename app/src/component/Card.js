@@ -11,38 +11,32 @@ const Card = ({value,index,uniqueChar}) => {
   
 
     const handleClick= (e,i)=>{
-        console.log("click",e,i)
+        
          
-       
-      
          const arrstr=tempstr.filter((ele,ind)=>{
            return (
             ind===i || ele!==e
            )
         })
-         
-        console.log(uniqueChar,arrstr.length)
-        
+          
         a.setState(arrstr);
         a.setprevious(tempstr)
         a.setresultant(arrstr);
-        
-        console.log(arrstr) 
-        
+      
         if(uniqueChar.size===arrstr.length){
             setTimeout(()=>{
-                alert("success")
+                
+                document.querySelector('.Success-header').style.display="flex"
+                
             },100)
         }
         }
-        
-        
+           
     let col=value.charCodeAt() < 97 ? 65:97
     if(value.charCodeAt()<65){
         col=33
     } 
-    console.log('----->',col)
-
+    
    const items = [  "#915c83",
    "blue",
    "yellow",

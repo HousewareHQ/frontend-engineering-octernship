@@ -19,6 +19,9 @@
     justify-content: center;
     align-items: center;
 }
+.old > h1 ,.result > h1{
+    font-style: italic;
+}
 .inner-cont h2{
     font-size: 100px;
 }

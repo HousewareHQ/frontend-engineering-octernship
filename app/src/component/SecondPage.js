@@ -3,6 +3,7 @@ import nodeContext from './nodeContext';
 import Card from './Card.js'
 import './Second.css'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import { useNavigate} from 'react-router-dom';
 
 const SecondPage = () => {
@@ -16,24 +17,34 @@ const SecondPage = () => {
     // console.log("length ==>",uniqueChar);
 
     return <div className='main'>
+        
         <div className='screen'>
         <div className='arrow' onClick={()=>navigate('/')}>
                 <ArrowBackIcon />
             </div>
             <div className='old'>
             <h1>Old String :-</h1>
-            <p>{a.previous}</p>
+            <div className='scroll'>{a.previous}</div>
             </div>
             <div className='result'>
             <h1>Resultant String :-</h1>
-            <p>{a.resultant}</p>
+            <div className='scroll'>{a.resultant}</div>
             </div>
             
             
         </div>
 
-        <div className="outer-container">
-            
+        <div className='Success-header'> 
+        <div className='right'>
+        <CheckRoundedIcon/>
+        
+        </div>
+        <div>Success..!!</div>
+           
+        </div>
+        <div className="outer-container" >
+             
+        
 
             {str.map((e, i) => {
                 // console.log(e);
