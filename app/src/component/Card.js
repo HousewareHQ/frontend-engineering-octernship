@@ -37,7 +37,7 @@ const Card = ({value,index,uniqueChar}) => {
         col=33
     } 
     
-   const items = [  "#915c83",
+   const items = [  "#915c83", 
    "blue",
    "yellow",
    "green",
