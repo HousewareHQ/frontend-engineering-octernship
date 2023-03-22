@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+
 import  "./page2.css";
 import { MdDelete } from "react-icons/md";
+import {BsFillSkipBackwardCircleFill } from "react-icons/bs";
 
 const letterBackground = {};
+//const navigate = useNavigate();
+
 
 export const Page2 = () => {
     const navigateTo = useNavigate();
@@ -22,12 +26,17 @@ export const Page2 = () => {
         });
     };
 
+
     const handleDelete = (value, key) => {
         const filteredArray = getFilteredArray(value, key);
         const newArray = inputArray.filter((val, id) => !filteredArray[id]);
         setInputArray(newArray);
         setCurrentString(newArray.join(""));
     };
+
+    const handleGoBack = () => {
+        navigateTo('/page1');
+      };
 
     inputArray.forEach((letter) => {
         if (!letterBackground[letter]) {
@@ -58,10 +67,14 @@ export const Page2 = () => {
         setShowSuccessMessage(!hasDuplicate);
     }, [currentString, getFilteredArray]);
 
+
+
     return (
         <div className="Container">
             {showSuccessMessage && (
-                <h1 style={{color:'#008248'}}>The string does not contain any duplicate characters</h1>
+                <div className="success-header">
+                <h1>All duplicate characters are Successfully Removed!</h1>
+                </div>
             )}
             <h2 className="screen2-h1">Page 2</h2> 
             <div className="table">
@@ -86,6 +99,9 @@ export const Page2 = () => {
                     
                     );
                 })}
+            </div>
+            <div className="back-btn">
+            <button onClick={handleGoBack} > <span className="back-icon"> <BsFillSkipBackwardCircleFill /> </span>Go Back</button>
             </div>
         </div>
     );
