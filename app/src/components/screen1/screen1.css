@@ -5,6 +5,9 @@
   flex-direction: column;
   background-color: #453c67;
 }
+.main-content {
+  scale: 1.7;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -52,9 +55,11 @@ form {
   font-weight: 600;
   font-size: 16px;
   color: #453c67;
+  transition: 0.2s all ease;
 }
 .submit-btn:hover {
   background: #f0f684;
+  scale: 1.07;
 }
 
 .location {
