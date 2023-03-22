@@ -28,19 +28,21 @@ export const Screen1 = () => {
   };
   return (
     <div className="container">
-      <h2 className="input-title">Text Input</h2>
-      <form>
-        <input
-          placeholder="Enter string here"
-          autoFocus
-          className="string-input-field"
-          type="text"
-          onChange={handleChange}
-        />
-        <button className="submit-btn" onClick={handleSubmit}>
-          Submit
-        </button>
-      </form>
+      <div className="main-content">
+        <h2 className="input-title">Text Input</h2>
+        <form>
+          <input
+            placeholder="Enter string here"
+            autoFocus
+            className="string-input-field"
+            type="text"
+            onChange={handleChange}
+          />
+          <button className="submit-btn" onClick={handleSubmit}>
+            Submit
+          </button>
+        </form>
+      </div>
       <div className="location">Screen 1</div>
       <ToastContainer
         position="top-right"

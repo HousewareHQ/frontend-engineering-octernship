@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./screen2.css";
 import { MdDeleteForever } from "react-icons/md";
@@ -21,14 +21,14 @@ export const Screen2 = () => {
     }
   }, [inputValue, navigate]);
 
-  const filterFunction = (value, key) => {
+  const filterFunction = useCallback((value, key) => { 
     return inputArr.map((v, k) => {
       if (value === v && key !== k) {
         return true;
       }
       return false;
     });
-  };
+  }, [inputArr]);
 
   const handleDelete = (value, key, e) => {
     const filterArray = filterFunction(value, key);
