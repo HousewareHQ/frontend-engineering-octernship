@@ -1,0 +1,39 @@
+.character_container{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6dd6d1;
+
+}
+
+.character_title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.back_button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    color: #6dd6d1;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back_button:hover {
+    background-color: #6dd6d1;
+    color: #fff;
+  }
+  

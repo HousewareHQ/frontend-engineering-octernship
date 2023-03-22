@@ -1,0 +1,85 @@
+.input_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    font-size: 40px;
+
+
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inputfield {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    resize: vertical;
+    text-align: center;
+    font-size: 60px;
+
+    }
+  
+  .submit_button{
+    width: 100%;
+    max-width: 200px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+  .inputfield_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #00ebeb;
+    margin: auto;
+    padding: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+
+  .input_box:hover {
+    border: 2px solid #6dd6d1;
+  animation:  hueRotation 2s infinite linear;
+  
+}
+
+.submit_button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .submit_button:hover {
+    background-color: #fff;
+    color: #13b118;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+  }
+  
