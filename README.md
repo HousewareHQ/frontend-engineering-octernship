@@ -10,12 +10,12 @@ This is a web application built using ReactJS that allows users to remove all du
 
 Clone the repository or download the zip file
 ```bash
-git clone https://github.com/Aadarshprajapati777/houseware-project.git
+https://github.com/Aadarshprajapati777/frontend-engineering-octernship.git
 ```
 Navigate to the project directory
 
 ```bash
-cd houseware-project
+cd app
 
 ```
 Install dependencies using npm or yarn
