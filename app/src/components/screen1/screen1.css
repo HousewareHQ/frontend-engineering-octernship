@@ -75,3 +75,10 @@ form {
   border-bottom-right-radius: 200rem;
   position: fixed;
 }
+
+@media (max-width: 450px) {
+  .main-content{
+    scale: 1.2;
+  }
+}
+
