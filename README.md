@@ -1,3 +1,6 @@
+# *Please note: Readme for the project is in the `app folder` 
+https://github.com/Patel-Muhammad/frontend-engineering-octernship/blob/main/app/README.md
+
 ## Houseware
 
 ### Company information 
