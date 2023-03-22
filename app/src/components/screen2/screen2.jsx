@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./screen2.css";
-import { MdDeleteForever } from "react-icons/md";
+import { MdDeleteForever  } from "react-icons/md";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 
 const letterBackground = {};
 
@@ -91,7 +92,8 @@ export const Screen2 = () => {
           );
         })}
       </div>
-      <div className="location">Screen 2</div>
+      <div title="This is screen 2" className="location">Screen 2</div>
+      <div title="Go back" className="back-btn-div" ><IoArrowBackCircleSharp className="back-btn" onClick={() => navigate('/')} /></div>
     </div>
   );
 };

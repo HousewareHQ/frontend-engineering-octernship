@@ -81,6 +81,20 @@
 .display-data .data {
   color: #66e3ec;
 }
+.back-btn-div{
+  font-size: 50px;
+  color: #f2f7a1;
+  text-align: center;
+  margin-top: 40px;
+}
+.back-btn{
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.back-btn:hover{
+  color: #f0f684;
+  transform: scale(1.1);
+}
 
 @media (max-width: 450px) {
   .flex-box {
