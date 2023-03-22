@@ -1,0 +1,94 @@
+.container-screen2 {
+  background-color: #453c67;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.container-screen2 h2 {
+  padding: 10px 0;
+  margin: 0;
+  color: #f2f7a1;
+}
+.card {
+  height: 140px;
+  width: 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 4px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.2s all ease;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 6px;
+  transform: scale(1.1);
+  transform: translateY(-4px);
+}
+
+.letter {
+  height: 40%;
+  width: 80%;
+  background-color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 100px;
+}
+
+.delete-icon {
+  font-size: 25px;
+  padding: 5px;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e24d4c;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.success-header {
+  background-color: #0abf30;
+  color: #fff;
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.display-data {
+  margin: 20px;
+}
+
+.display-data .data {
+  color: #66e3ec;
+}
+
+@media (max-width: 450px) {
+  .flex-box {
+    margin: 0 0px;
+  }
+  .success-header h1 {
+    font-size: 20px;
+    margin: 0 5px;
+    text-align: center;
+  }
+}
