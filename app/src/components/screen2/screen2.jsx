@@ -78,7 +78,7 @@ export const Screen2 = () => {
             <div
               className="card"
               key={key}
-              style={{ backgroundColor: letterBackground[input] }}
+              style={{ backgroundColor: letterBackground[input.toLowerCase()] }}
             >
               <div className="letter">{input}</div>
               <button
