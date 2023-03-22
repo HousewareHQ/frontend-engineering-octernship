@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Duplicate Character Remover : Assignment
+This is a ReactJS app that allows users to remove duplicate characters from a string.
+It has two screens:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Screen 1: A form where users can input a string and submit it to the app.
+- Screen 2: A view where the app displays the original string, the current string, and a list of cards representing each character in the current. Users can click on the delete icon on each card to remove all duplicate instances of that character in the string except the one that is being clicked.
 
-## Available Scripts
+**Note:** Link to view the app: https://duplicate-char-remover.web.app/ . **I have deployed it on firebase, more about it later in the readme.**
 
-In the project directory, you can run:
+## Instructions to run this project locally
+1. Clone the repository:
+```
+git clone https://github.com/Patel-Muhammad/frontend-engineering-octernship.git
+```
+2. Navigate to the **app** directory:
+```
+cd app
+```
+3. Install dependencies:
+```
+npm install
+```
+4. Start the app locally:
+```
+npm start
+```
+5. Open the app in browser:
+```
+http://localhost:3000
+```
 
-### `npm start`
+## Assumptions
+- Capital and small letters are considered the same.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requirements 
+All of the requirements for the project have been fulfilled:
+- Users are not allowed to go to Screen 2 without providing a non-empty value in the input field on Screen 1.
+![Duplicate character remover (1)](https://user-images.githubusercontent.com/96219910/226846013-33ce2e2c-d4b3-455c-b1a7-b75f952e9baa.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Clicking on a card delete icon on Screen 2 deletes all other appearances of the character in the string, except the one that is clicked and the current string is being updated on clicking the delete icon.(here I clicked on the letter "b" to show as an example)
+![Duplicate character remover (2)](https://user-images.githubusercontent.com/96219910/226847913-ebced252-d8dc-477e-b704-327923020a16.gif)
 
-### `npm test`
+- Cards for the same characters have the same background color.
+![Duplicate character remover (3)](https://user-images.githubusercontent.com/96219910/226849462-6da93f73-9f29-4fd2-956f-ba8e7d31ff82.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- When there are no more characters with greater than 1 appearance in the string, a success header is rendered.
+![Duplicate character remover (4)](https://user-images.githubusercontent.com/96219910/226850180-ce6e49f5-fbe9-4812-95ef-71a231b2df5c.gif)
 
-### `npm run build`
+- New current string is always updated and shown on screen2
+![Duplicate character remover (5)](https://user-images.githubusercontent.com/96219910/226851533-6f662ef2-4765-4b02-b6b6-d41987fac2ef.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The input field is cleared on return to first screen
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://user-images.githubusercontent.com/96219910/226858884-32f6f066-198b-4bf2-87bd-b05d689edce3.mp4
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- The project is written in ReactJS and uses react-toastify and react-icons library.
 
-## Learn More
+## Additional Features
+- The app is completely responsive and can be used on mobile phones as well.
+<img height="600px" src="https://user-images.githubusercontent.com/96219910/226855819-e9d27009-574a-42f0-adeb-420e46218800.gif">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The app is deployed on Firebase. I also have created a workflow file for github actions so that the app is automatically built and deployed whenever a commit is made or a pull request is created on main branch.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Link to view the site:** https://duplicate-char-remover.web.app/
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
