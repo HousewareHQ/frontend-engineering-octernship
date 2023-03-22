@@ -1,91 +1,96 @@
-# *Please note: Readme for the project is in the `app folder` 
-https://github.com/Patel-Muhammad/frontend-engineering-octernship/blob/main/app/README.md
+# Duplicate Character Remover : Assignment
+This is a ReactJS app that allows users to remove duplicate characters from a string.
+It has two screens:
 
-## Houseware
+- Screen 1: A form where users can input a string and submit it to the app.
+- Screen 2: A view where the app displays the original string, the current string, and a list of cards representing each character in the current. Users can click on the delete icon on each card to remove all duplicate instances of that character in the string except the one that is being clicked.
 
-### Company information 
+**Note:** Link to view the app: https://duplicate-char-remover.web.app/ . **I have deployed it on firebase, more about it later in the readme.**
 
-Houseware's vision is to empower the next generation of knowledge workers by putting the data warehouse in their hands, in the language they speak. Houseware is purpose-built for the Data Cloud’s untouched creators, empowering internal apps across organizations. 
+## Instructions to run this project locally
+1. Clone the repository:
+```
+git clone https://github.com/Patel-Muhammad/frontend-engineering-octernship.git
+```
+2. Navigate to the **app** directory:
+```
+cd app
+```
+3. Install dependencies:
+```
+npm install
+```
+4. Start the app locally:
+```
+npm start
+```
+5. Open the app in browser:
+```
+http://localhost:3000
+```
 
-### Why participate in an Octernship with Houseware
+## Assumptions
+- Capital and small letters are considered the same.
 
-Houseware is changing the way the data warehouse is leveraged, and we want you to help build Houseware! Our team came together to answer the singular question, "how can we flip the value of the data warehouse to the ones who really need it, to the ones who drive decisions". 
+## Requirements 
+All of the requirements for the project have been fulfilled:
+- Users are not allowed to go to Screen 2 without providing a non-empty value in the input field on Screen 1.
+![Duplicate character remover (1)](https://user-images.githubusercontent.com/96219910/226846013-33ce2e2c-d4b3-455c-b1a7-b75f952e9baa.gif)
 
-In this role, you'll have the opportunity to work as a Frontend engineer with the Houseware team on multiple customer-facing projects. You'd be involved with delivering the optimal user experience for the end user, while taking complete ownership of engineering challenges - this would include communicating with the stakeholders, setting the right expectations, and ensuring top quality for the code & the product being shipped.
+<br>
+<br>
 
-### Octernship role description
+- Clicking on a card delete icon on Screen 2 deletes all other appearances of the character in the string, except the one that is clicked and the current string is being updated on clicking the delete icon.(here I clicked on the letter "b" to show as an example)
+![Duplicate character remover (2)](https://user-images.githubusercontent.com/96219910/226847913-ebced252-d8dc-477e-b704-327923020a16.gif)
 
-We're looking for frontend developers to join the Houseware team. 
+<br>
+<br>
 
-We are hell-bent on building a forward-looking product, something that constantly pushes us to think by first principles and question assumptions, building a team that is agile in adapting and ever curious. While fast-paced execution is one of the prerequisites in this role, equally important is the ability to pause and take stock of where product/engineering is heading from a long-term perspective. Your initiative is another thing that we would expect to shine through here, as you continuously navigate through ambiguous waters while working with vigor on open-ended questions - all to solve problems for and empathize with the end users.
+- Cards for the same characters have the same background color.
+![Duplicate character remover (3)](https://user-images.githubusercontent.com/96219910/226849462-6da93f73-9f29-4fd2-956f-ba8e7d31ff82.gif)
 
-| Octernship info  | Timelines and Stipend |
-| ------------- | ------------- |
-| Assignment Deadline  | 26 March 2023  |
-| Octernship Duration  | 3-6 Months  |
-| Monthly Stipend  | $600 USD  |
+<br>
+<br>
 
-### Recommended qualifications
+- When there are no more characters with greater than 1 appearance in the string, a success header is rendered.
+![Duplicate character remover (4)](https://user-images.githubusercontent.com/96219910/226850180-ce6e49f5-fbe9-4812-95ef-71a231b2df5c.gif)
 
-- You have a solid problem-solving framework.
-- You know Javascript and the Browser ecosystem very well; we love polyglot programmers and have services written in Go and Python.
-- We write React; Typescript, so we expect you to be well versed with React. If you have worked with Typescript or any typed language before, it's a plus.
+<br>
+<br>
 
-If you love to optimize web vitals, do SSR, have worked with Bundlers, and multi-threading in JS excites you, we can’t wait to talk.
+- New current string is always updated and shown on screen2
+![Duplicate character remover (5)](https://user-images.githubusercontent.com/96219910/226851533-6f662ef2-4765-4b02-b6b6-d41987fac2ef.gif)
 
-### Eligibility
+<br>
+<br>
 
-To participate, you must be:
+- The input field is cleared on return to first screen
 
-* A [verified student](https://education.github.com/discount_requests/pack_application) on Global Campus
+https://user-images.githubusercontent.com/96219910/226858884-32f6f066-198b-4bf2-87bd-b05d689edce3.mp4
 
-* 18 years or older
-
-* Active contributor on GitHub (monthly)
-
-# Assignment
-
-## Duplicate character remover
-
-### Task instructions
-
-Develop an app in reactjs, with two screens.
-- Screen 1: Provide an input field and a button with text 'Submit'. 
-    - User should be able to put in any value in the input field. Clicking on the button should redirect user to screen 2. 
-    - If the input field is empty or has only space characters, the user should be shown an alert asking them to provide a non-empty value. In this scenario, we should not redirect the user to screen 2.
-
-- Screen 2: Let's iterate over each character of the string and render them as a card on the UI. Each card should have the character, and a delete icon on top. Clicking on the delete icon should delete all duplicate instances of the chosen character in the string. We should make sure that only the clicked instance of the character remains on the screen. 
-    - Cards for the same characters should have the same background color. 
-    - If there are no more characters with greater than 1 appearance in the string, we shall render a success header. 
-    - We should also show the original string and the new resultant string. 
-    - We should provide a back button to go back to screen 1. 
-    - If the user goes back to screen 1, the input field should be cleared/empty.
-
-### Task Expectations
-
-- The user shouldn't be allowed to go to screen 2 without providing a non-empty value in the input field on screen 1.
-- On Screen 2, clicking on a card delete icon should delete all other appearance of the character in the string. 
-- The cards shown on the screen should also be updated. 
-  - Let's say if the original string is `aabcaccda`. Clicking on the first `a` should leave the string as `abcccd`. 
-  - Let's say the original string is `baebdeb`. Clicking on the character `b` at index 3 (0 index), should result in `aebde`.
-- Once all the duplicate appearances in the string are removed, the user should see a success header with the original string & the resultant string.
-- The project should be written in JS or Typescript with React. Feel free to use any component library, any other packages, css libraries etc. 
-- *Your time is better utilised solving the actual problem rather than re-inventing the wheel.*
-- Make sure you do write a readme & a PR description on how to run the project locally.
-
-### Task submission
-
-Students are expected to use the [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow) when working on their project. 
-
-1. Please push your final code changes to your main branch
-2. Please add your instructions/assumptions/any other remarks in the beginning of the Readme file and the reviewers will take a look
-3. The PR created called Feedback will be used for sharing any feedback/asking questions by the reviewers, please make sure you do not close the Feedback PR.
-The assignment will be automatically submitted on the "Assignment Deadline" date -- you don't need to do anything apart from what is mentioned above.
-4. Using GitHub Issues to ask any relevant questions regarding the project
+<br>
+<br>
 
 
-### Resources
 
-- [React - Getting started](https://reactjs.org/docs/getting-started.html)
-- [Create-react-app](https://create-react-app.dev/)
+
+
+
+- The project is written in ReactJS and uses react-toastify and react-icons library.
+
+
+## Additional Features
+- The app is completely responsive and can be used on mobile phones as well.
+<img height="600px" src="https://user-images.githubusercontent.com/96219910/226855819-e9d27009-574a-42f0-adeb-420e46218800.gif">
+
+- The app is deployed on Firebase. I also have created a workflow file for github actions so that the app is automatically built and deployed whenever a commit is made or a pull request is created on main branch.
+
+**Link to view the site:** https://duplicate-char-remover.web.app/
+
+
+
+
+
+
+
 
