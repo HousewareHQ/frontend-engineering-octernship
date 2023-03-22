@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #453c67;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 100vh;
+}
+.string-input-field {
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 200px;
+  padding: 2px 10px;
+  font-size: 20px;
+  outline: none;
+  background-color: #e3e3e3;
+}
+.string-input-field::placeholder {
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 500;
+}
+.input-title {
+  margin-right: 90px;
+  margin-bottom: 5px;
+  color: #f2f7a1;
+}
+.input-title h2 {
+  margin: 0;
+  padding: 0;
+}
+.submit-btn {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  height: 36px;
+  width: 93px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #f2f7a1;
+  font-weight: 600;
+  font-size: 16px;
+  color: #453c67;
+}
+.submit-btn:hover {
+  background: #f0f684;
+}
+
+.location {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f2f7a1;
+  color: #453c67;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 4px;
+  border-top-right-radius: 200rem;
+  border-bottom-right-radius: 200rem;
+  position: fixed;
+}
