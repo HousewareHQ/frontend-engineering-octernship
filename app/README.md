@@ -37,21 +37,39 @@ All of the requirements for the project have been fulfilled:
 - Users are not allowed to go to Screen 2 without providing a non-empty value in the input field on Screen 1.
 ![Duplicate character remover (1)](https://user-images.githubusercontent.com/96219910/226846013-33ce2e2c-d4b3-455c-b1a7-b75f952e9baa.gif)
 
+<br>
+<br>
+
 - Clicking on a card delete icon on Screen 2 deletes all other appearances of the character in the string, except the one that is clicked and the current string is being updated on clicking the delete icon.(here I clicked on the letter "b" to show as an example)
 ![Duplicate character remover (2)](https://user-images.githubusercontent.com/96219910/226847913-ebced252-d8dc-477e-b704-327923020a16.gif)
+
+<br>
+<br>
 
 - Cards for the same characters have the same background color.
 ![Duplicate character remover (3)](https://user-images.githubusercontent.com/96219910/226849462-6da93f73-9f29-4fd2-956f-ba8e7d31ff82.gif)
 
+<br>
+<br>
+
 - When there are no more characters with greater than 1 appearance in the string, a success header is rendered.
 ![Duplicate character remover (4)](https://user-images.githubusercontent.com/96219910/226850180-ce6e49f5-fbe9-4812-95ef-71a231b2df5c.gif)
+
+<br>
+<br>
 
 - New current string is always updated and shown on screen2
 ![Duplicate character remover (5)](https://user-images.githubusercontent.com/96219910/226851533-6f662ef2-4765-4b02-b6b6-d41987fac2ef.gif)
 
+<br>
+<br>
+
 - The input field is cleared on return to first screen
 
 https://user-images.githubusercontent.com/96219910/226858884-32f6f066-198b-4bf2-87bd-b05d689edce3.mp4
+
+<br>
+<br>
 
 
 
@@ -59,6 +77,7 @@ https://user-images.githubusercontent.com/96219910/226858884-32f6f066-198b-4bf2-
 
 
 - The project is written in ReactJS and uses react-toastify and react-icons library.
+
 
 ## Additional Features
 - The app is completely responsive and can be used on mobile phones as well.
