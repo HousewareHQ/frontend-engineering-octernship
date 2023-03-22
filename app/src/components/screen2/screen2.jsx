@@ -23,7 +23,7 @@ export const Screen2 = () => {
 
   const filterFunction = useCallback((value, key) => { 
     return inputArr.map((v, k) => {
-      if (value === v && key !== k) {
+      if (value.toLowerCase() === v.toLowerCase() && key !== k) {
         return true;
       }
       return false;
