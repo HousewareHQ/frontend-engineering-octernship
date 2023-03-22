@@ -60,7 +60,7 @@ export const Screen2 = () => {
       {showSuccess && (
         <div className="success-header">
           <h1>
-            Success! There are no Duplicate charaters in the string 🎊
+            Success! There are no Duplicate characters in the string 🎊
           </h1>
         </div>
       )}
