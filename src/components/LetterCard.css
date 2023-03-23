@@ -1,29 +1,5 @@
 
-.screen2-h1{
-  margin-top: 0;
-    font-size: 3rem;
-    color: #61045f;
-  }
-  
-  .table{
-    border:3px solid palevioletred;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-
-
-  }
-.p-text{
-    font-size: 1.75rem;
-    margin: .5rem 0;
-    color:#008248;
-
-  }
-  .current{
-    color: #333;
-  }
-
-   .letter-container {
+.letter-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -81,45 +57,3 @@
     margin-right: 2rem;
     align-items: end;
 }
-
-  .msg-text {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    margin-bottom: .5rem;
-    color: #008248;
-  
-  }
-  .back-icon{
-    font-size: 1.5rem;
-  }
-  
-  .success-header{
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .success-header h1{
-    color: #000ffe;
-    /* background-color: #03C988; */
-
-  }
-  
-  .back-btn {
-    margin-top: 20px;
-  }
-  
-  .back-btn button {
-    background-color: palegreen;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 10px 20px;
-  }
-  
-  .back-btn button:hover {
-    background-color: #d0d0d0;
-  }
-  

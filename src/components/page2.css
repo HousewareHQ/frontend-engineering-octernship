@@ -1,0 +1,36 @@
+
+.screen2-h1{
+  margin-top: 0;
+    font-size: 3rem;
+    color: #61045f;
+  }
+  
+  .table{
+    /* border:3px solid palevioletred; */
+    border-radius: 5px;
+    background-color: lightblue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+
+  }
+.p-text{
+    font-size: 1.75rem;
+    margin: .5rem 0;
+    color:#008248;
+
+  }
+  .current{
+    color: #333;
+  }
+
+  .msg-text {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    margin-bottom: .5rem;
+    color: #008248;
+  
+  }
+ 

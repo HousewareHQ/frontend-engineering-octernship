@@ -1,0 +1,23 @@
+.back-icon{
+    font-size: 1.125rem;
+    padding: 5px;
+  }
+  
+
+  .back-btn {
+    margin-top: 20px;
+  }
+  
+  .back-btn button {
+    background-color: palegreen;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  
+  .back-btn button:hover {
+    background-color: #d0d0d0;
+  }
+  
