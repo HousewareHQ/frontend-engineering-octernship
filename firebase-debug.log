@@ -1,0 +1,30 @@
+[debug] [2023-03-23T08:58:42.318Z] ----------------------------------------------------------------------
+[debug] [2023-03-23T08:58:42.324Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\aknbo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2023-03-23T08:58:42.326Z] CLI Version:   11.25.1
+[debug] [2023-03-23T08:58:42.326Z] Platform:      win32
+[debug] [2023-03-23T08:58:42.326Z] Node Version:  v19.6.0
+[debug] [2023-03-23T08:58:42.326Z] Time:          Thu Mar 23 2023 14:28:42 GMT+0530 (India Standard Time)
+[debug] [2023-03-23T08:58:42.327Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-23T08:58:42.505Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-23T08:58:42.506Z] > authorizing via signed-in user (aknbo30@gmail.com)
+[debug] [2023-03-23T08:58:42.519Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2023-03-23T08:59:01.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-03-23T08:59:01.141Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌────────────────────────┬──────────────────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name   │ Project ID                   │ Project Number │ Resource Location ID │
+├────────────────────────┼──────────────────────────────┼────────────────┼──────────────────────┤
+│ AMAZONCHALLANGE        │ challange-111c8              │ 1077564316563  │ [Not specified]      │
+├────────────────────────┼──────────────────────────────┼────────────────┼──────────────────────┤
+│ duplicate-char-remover │ duplicate-char-remover-8b327 │ 808530927444   │ [Not specified]      │
+├────────────────────────┼──────────────────────────────┼────────────────┼──────────────────────┤
+│ Octrenship             │ octrenship (current)         │ 391003581068   │ [Not specified]      │
+└────────────────────────┴──────────────────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 3 project(s) total.
+[debug] [2023-03-23T08:59:10.583Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\aknbo\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:568:17)
+    at process.processTimers (node:internal/timers:511:7)
+[error] 
+[error] Error: An unexpected error has occurred.
