@@ -71,10 +71,11 @@ https://user-images.githubusercontent.com/96219910/226858884-32f6f066-198b-4bf2-
 <br>
 <br>
 
+- There is a back button on screen 2 which navigates user to screen 1 when clicked
+![Duplicate character remover (6)](https://user-images.githubusercontent.com/96219910/227168837-6794860a-d915-4880-bc6f-99cd09963d97.gif)
 
-
-
-
+<br>
+<br>
 
 - The project is written in ReactJS and uses react-toastify and react-icons library.
 
