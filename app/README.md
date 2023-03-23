@@ -18,7 +18,9 @@ All whitespaces received in the input are replaced. And all input values are con
 
 ## View project
 
-In the project directory, you can run:
+- clone the project with, git clone https://github.com/JerryOlu-02/frontend-engineering-octernship.git
+- navigate to the ap folder with, cd app
+- install with, npm install
 
 ### `npm start`
 
