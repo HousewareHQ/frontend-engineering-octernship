@@ -3,6 +3,7 @@ import { deleteFinalDulicates } from '../store';
 import { BsTrash3 } from 'react-icons/bs';
 
 const Card = function ({ identicalClass, string, index }) {
+  console.log(identicalClass);
   const dispatch = useDispatch();
 
   const handleDelete = function (strValue, strIndex) {
@@ -15,7 +16,7 @@ const Card = function ({ identicalClass, string, index }) {
   };
 
   return (
-    <div className={`card ${identicalClass}`}>
+    <div className={`${identicalClass} card`}>
       {string}
       <BsTrash3 onClick={handleDelete.bind(this, string, index)} />
     </div>

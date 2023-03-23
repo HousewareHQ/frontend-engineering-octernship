@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Card from '../components/Card';
@@ -7,11 +8,19 @@ const ScreenTwo = function () {
     return form;
   });
 
-  let previousString = null;
+  const stringSet = new Set();
+  const repeatedStrings = [];
+
+  finalTextArray.forEach((string) => {
+    if (stringSet.has(string)) {
+      repeatedStrings.push(string);
+    } else {
+      stringSet.add(string);
+    }
+  });
 
   const cards = finalTextArray.map((string, index) => {
-    const isIdentical = string === previousString;
-    previousString = string;
+    const isIdentical = repeatedStrings.includes(string);
 
     return (
       <Card
