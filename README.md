@@ -1,11 +1,10 @@
 # Duplicate Character Remover : Assignment
 
 # 📝 Description
-
 <h3> It is a ReactJS app that allows users to remove duplicate characters from a string.</h3>
 <h4>It has two screens:</h4> 
-- Screen 1: The form contains a text field where users can type in their string and a submit button to finalize the submission.
-- Screen 2: In this screen showing the original string, the current string, and a list of cards representing each character in the current string. The user   can click on a delete icon located on each card to remove all duplicate instances of that character in the string except the one that is being clicked.
+ <li>Screen 1: The form contains a text field where users can type in their string and a submit button to finalize the submission.</li>
+<li> Screen 2: In this screen showing the original string, the current string, and a list of cards representing each character in the current string. The user can click on a delete icon located on each card to remove all duplicate instances of that character in the string except the one that is being clicked.</li>
 
 
 # 🚀Live Demo
