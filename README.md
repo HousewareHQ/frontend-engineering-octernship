@@ -76,3 +76,7 @@ I'm a B.Tech CSE student at Amrita Vishwa Vidyapeetham and member @ amFoss.
 
 
 ![App Screenshot](https://github.com/Aadarshprajapati777/houseware-project/blob/main/app/src/screenshots/Screenshot%20from%202023-03-22%2015-21-00.png?raw=true)
+
+
+##checkout the project
+https://duplicatecharacterremover.netlify.app/
