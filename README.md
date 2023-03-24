@@ -1,6 +1,8 @@
-# Duplicate Character Remover : Assignment
+# frontend-engineering-octernship Duplicate char remover project.
+
 
 # 📝 Description
+
 <h3> It is a ReactJS app that allows users to remove duplicate characters from a string.</h3>
 <h4>It has two screens:</h4> 
  <li>Screen 1: The form contains a text field where users can type in their string and a submit button to finalize the submission.</li>
@@ -9,33 +11,33 @@
 
 # 🚀Live Demo:
 
- - I deployed the project on Google Firebase.  you can manually open the browser and type URL  https://duplicate-char-remover-8b327.web.app .  
-- Or , Else simply click this link : https://duplicate-char-remover-8b327.web.app 👈 to see my React project.
+ - I deployed the project on Google Firebase.   
+-  simply click this link : https://duplicate-char-remover-8b327.web.app 👈 to see my React project.
 
 
-# Instructions to run this project locally
+# 👉 Instructions to run this project locally
 
-<h3> Step:1.Clone the repository </h3>
+<h3> Step:1.Clone the repository by running the following command  </h3>
 
 ``` 
 git clone https://github.com/amaranand360/frontend-engineering-octernship.git
 
 ```
 
-<h3>Step:2.Navigate to the app directory </h3>
+<h3>Step:2.Navigate to the project directory by running the following command  </h3>
 
 ```
 cd app
 
 ```
-<h3>Step:3.Install dependencies </h3>
+<h3>Step:3.Install  React app's Dependencies </h3>
 
 ```
 npm install
 
 ```
 
-<h3>Step:4.Start the app locally </h3>
+<h3>Step:4.To start the React app in your default browser by running the following command </h3>
 
 ```
 npm start
@@ -48,10 +50,11 @@ npm start
 http://localhost:3000
 
 ```
-<h2>Note: Make sure that you have Node.js and npm installed on your computer</h2>
+- <h2>Note: Make sure  you have Node.js and npm installed on your computer</h2>
 
 
 # 🎨 Features
+
 - Users are not allowed to go to page 2 without providing a non-empty value in the input field on Page 1.
 - All letter cards with the same character have the same background color.
 - The container is nicely styled with a modern design, and each letter card has a hover effects.
@@ -61,7 +64,8 @@ http://localhost:3000
 - The app is completely responsive and can be used on mobile phones as well.
 
 
-# Requirements
+# Requirements 
+
 - <h3>Screen 1: Provide an input field and a button with text 'Submit'.</h3>
 
 ![Screenshot (30)](https://user-images.githubusercontent.com/122713145/227322833-30bc6701-3a7c-4dbf-a354-c3c000819566.png)
@@ -90,5 +94,10 @@ https://user-images.githubusercontent.com/122713145/227333961-4fe99660-eff8-43fc
 
 
 <h2> Website Link: https://duplicate-char-remover-8b327.web.app </h2>
+
+# 🎨 Additional futures 
+
+![githubimg](https://user-images.githubusercontent.com/122713145/227488087-c1f34788-ea35-481d-88ba-ad53437cddb8.jpg)
+
 
 
