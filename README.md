@@ -55,13 +55,17 @@ http://localhost:3000
 
 # 🎨 Features
 
-- Users are not allowed to go to page 2 without providing a non-empty value in the input field on Page 1.
+<h3>
+ 
+-  Users are not allowed to go to page 2 without providing a non-empty value in the input field on Page 1.
 - All letter cards with the same character have the same background color.
 - The container is nicely styled with a modern design, and each letter card has a hover effects.
 - When User Clicked on a card delete icon on deletes all other appearances of the character in the string, except the one that is clicked.
 - This header appears when there are no more characters with greater than 1 appearance
 - User have opction to GoBack by clicking Go Back button.
 - The app is completely responsive and can be used on mobile phones as well.
+ 
+ </h3>
 
 
 # Requirements 
@@ -93,11 +97,13 @@ https://user-images.githubusercontent.com/122713145/227333961-4fe99660-eff8-43fc
 ![Screenshot (42)](https://user-images.githubusercontent.com/122713145/227334278-e919682b-8995-48a2-9fd1-c4b66badd907.png)
 
 
-<h2> Website Link: https://duplicate-char-remover-8b327.web.app </h2>
 
 # 🎨 Additional futures 
 
-![githubimg](https://user-images.githubusercontent.com/122713145/227488087-c1f34788-ea35-481d-88ba-ad53437cddb8.jpg)
+![githubimg](https://user-images.githubusercontent.com/122713145/227491322-13292873-3691-4c4b-928e-b6ff21c746bc.jpg)
 
+
+
+<h2> project Demo Link: https://duplicate-char-remover-8b327.web.app </h2>
 
 
