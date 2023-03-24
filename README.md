@@ -100,10 +100,7 @@ https://user-images.githubusercontent.com/122713145/227333961-4fe99660-eff8-43fc
 
 # 🎨 Additional futures 
 
-![githubimg](https://user-images.githubusercontent.com/122713145/227491322-13292873-3691-4c4b-928e-b6ff21c746bc.jpg)
 
-
-
-<h2> project Demo Link: https://duplicate-char-remover-8b327.web.app </h2>
+![Screenshot (46)](https://user-images.githubusercontent.com/122713145/227493337-41a5318f-a9ff-419e-82a5-7c43f04312a6.png)
 
 
