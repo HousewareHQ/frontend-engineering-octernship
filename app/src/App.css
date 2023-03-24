@@ -44,9 +44,17 @@
   color: var(--grey-400);
 }
 @media (max-width: 768px) {
+  .home__main {
+    margin: 0 1rem;
+  }
   .home__main input {
-    height: 2.5rem;
+    font-size: 1.2rem;
+    height: 2.4rem;
     width: 100%;
+    margin-top: 0;
+  }
+  .home__main input::placeholder {
+    font-size: 1.1rem;
   }
 }
 
@@ -65,7 +73,7 @@
 #modal .warning__icon svg {
   height: 2.5rem;
   width: 2.5rem;
-  margin-right: 1rem;
+  margin-right: .5rem;
   color: rgb(241, 189, 60);
   padding: 0.3rem;
   background-color: rgb(246, 231, 196);

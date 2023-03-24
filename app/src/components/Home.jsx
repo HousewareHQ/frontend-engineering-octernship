@@ -22,7 +22,7 @@ const Home = () => {
       setShowModal(true);
       return;
     }
-    navigate(`/output/${text}`);
+    navigate(`/output/${text.toLowerCase()}`);
   };
 
   useEffect(() => {
