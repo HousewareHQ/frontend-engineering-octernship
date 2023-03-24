@@ -7,12 +7,49 @@
 <li> Screen 2: In this screen showing the original string, the current string, and a list of cards representing each character in the current string. The user can click on a delete icon located on each card to remove all duplicate instances of that character in the string except the one that is being clicked.</li>
 
 
-# 🚀Live Demo
-- Note: Link to view the app: https://duplicate-char-remover-8b327.web.app/ 
+# 🚀Live Demo:
+
+ -I deployed the project on Google Firebase.  you can manually open the browser and type URL  https://duplicate-char-remover-8b327.web.app .  
+- Or , Else simply click this link : https://duplicate-char-remover-8b327.web.app 👈 to see my React project.
+
 
 # Instructions to run this project locally
-1.Clone the repository:
-https://github.com/amaranand360/frontend-engineering-octernship.git
+
+<h3> Step:1.Clone the repository </h3>
+
+``` 
+git clone https://github.com/amaranand360/frontend-engineering-octernship.git
+
+```
+
+<h3>Step:2.Navigate to the app directory </h3>
+
+```
+cd app
+
+```
+<h3>Step:3.Install dependencies </h3>
+
+```
+npm install
+
+```
+
+<h3>Step:4.Start the app locally </h3>
+
+```
+npm start
+
+```
+
+<h3>Step:5.If your browser doesn't open automatically, you can manually open it and navigate to  </h3>
+
+```
+http://localhost:3000
+
+```
+<h2>Note: Make sure that you have Node.js and npm installed on your computer</h2>
+
 
 # 🎨 Features
 - Users are not allowed to go to page 2 without providing a non-empty value in the input field on Page 1.
