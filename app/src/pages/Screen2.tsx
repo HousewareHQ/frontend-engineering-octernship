@@ -1,76 +1,86 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import CharacterCard from '../components/CharacterCard';
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import CharacterCard from "../components/CharacterCard";
 
-const Screen2: React.FC = () => {
+type InpMap = {
+  [key: string]: {
+    backgroundColor: string,
+    idx: number[]
+  }
+}
+
+export const Screen2 = () => {
   const params = useParams()
   const [inputValue, setInputValue] = useState(decodeURIComponent(params.input!));
+  const [charsAlreadyOne, setCharsAlreadyOne] = useState<string[]>([]);
+  // map to store same character and its index, also store its background color
+  const [inpMap, setInpMap] = useState<InpMap>(() => {
+    let inp = decodeURIComponent(params.input!)
+    let inpMapTemp: InpMap = {}
+    inp.split('').forEach((char, idx) => {
+      // build map to group similar character with their index
+      if(inpMapTemp[char]) {
+        inpMapTemp[char].idx.push(idx)
+      } else {
+        inpMapTemp[char] = {
+          // only randomize bright color
+          backgroundColor: `hsl(${Math.random() * 360}, 100%, 55%)`,
+          idx: [idx]
+        }
+      }
+    })
+    //retreve all characters that only have one index
+    setCharsAlreadyOne(Object.keys(inpMapTemp).filter(char => inpMapTemp[char].idx.length === 1))
+    return inpMapTemp
+  })
   const navigate = useNavigate();
-  const [result, setResult] = useState('');
-
-  useEffect(() => {
-    if (inputValue.trim() === '') {
-      navigate('/');
-    }
-  }, [navigate, inputValue]);
 
   const handleBack = () => {
+    setInputValue('');
     navigate('/');
   };
 
   const handleDelete = (char: string) => {
-    const counts: { [key: string]: number } = {};
-    for (let i = 0; i < inputValue.length; i++) {
-      const c = inputValue[i];
-      counts[c] = (counts[c] || 0) + 1;
-    }
-
-    const charCount = counts[char];
-
-    if (charCount > 1) {
-      const charIndexes = inputValue
-        .split('')
-        .map((c, i) => (c === char ? i : -1))
-        .filter((i) => i !== -1);
-
-      const charIndex = charIndexes[0];
-      const result = inputValue.slice(0, charIndex) + inputValue.slice(charIndex + 1);
-      setResult(result);
-    } else {
-      setResult(inputValue);
-    }
+    setInpMap(prev => {
+      // leave one index for this character
+      let newVal = {...prev}
+      if(newVal[char].idx.length > 1) {
+        newVal[char].idx = [newVal[char].idx[0]]
+      }
+      else {
+        // push this character to charsAlreadyOne
+        setCharsAlreadyOne(prev => [...prev, char])
+      }
+      return newVal
+    })
+    
   };
-
-  const characters = inputValue.split('');
-
-  const characterCards = characters.map((char, index) => {
-    // randomize background color, only bright colors using hsl
-    const backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 100%, 75%)`;
-    return <CharacterCard key={index} character={char} backgroundColor={backgroundColor} onDelete={() => {handleDelete(char)}} />;
-  });
-
-  const hasDuplicates = (str: string) => {
-    return new Set(str).size !== str.length;
-  };
-
-  const originalString = <p className="mb-4">Original string: {inputValue}</p>;
-  const resultantString = (
-    <p className="mb-4">
-      Resultant string: {result} {hasDuplicates(result) ? '' : <span className="text-green-500">(Success)</span>}
-    </p>
-  );
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-8">Screen 2</h1>
-      {originalString}
-      {resultantString}
-      <div className="flex flex-wrap mb-4">{characterCards}</div>
-      <button className="bg-blue-500 text-white p-2 rounded-md mr-4" onClick={handleBack}>
-        Back
-      </button>
+    <div className="container mx-auto">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="text-4xl mb-6">Screen 2</h1>
+        <p className="mb-4">Your input: {inputValue}</p>
+        <p className="mb-4">Current string: {
+          // filter out characters that isn't in inpMap (that has been filtered out by delete button)
+          inputValue.split('').filter((char, i) => inpMap[char]?.idx.includes(i)).join('')
+        }</p>
+        {charsAlreadyOne.length == Object.keys(inpMap).length && <p className="mb-4">You have removed all duplicate characters!</p>}
+        <div className="mb-4 grid grid-cols-8 gap-2 w-full">
+          {inputValue.split('').map((char, i) => {
+            if(inpMap[char]?.idx.includes(i)) {
+              return <CharacterCard 
+                key={i} character={char} 
+                onDelete={() => handleDelete(char)} 
+                haveDuplicates={inpMap[char].idx.length > 1}
+                backgroundColor={inpMap[char]?.backgroundColor}/>
+            }
+          })}
+        </div>
+        <button className="bg-gray-500 text-white py-2 px-4 rounded mt-4" onClick={handleBack}>
+          Back
+        </button>
+      </div>
     </div>
   );
-};
-
-export default Screen2;
+}

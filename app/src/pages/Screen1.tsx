@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Screen1: React.FC = () => {
+export const Screen1: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate();
 
@@ -29,5 +29,3 @@ const Screen1: React.FC = () => {
     </div>
   );
 };
-
-export default Screen1;
