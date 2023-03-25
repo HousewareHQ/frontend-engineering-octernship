@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
+import { NotFound } from './pages/NotFound'
 import {Screen1} from './pages/Screen1'
 import {Screen2} from './pages/Screen2'
 
@@ -9,6 +10,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Screen1 />,
+    errorElement: <NotFound />
   },
   {
     path: '/screen2/:input',
