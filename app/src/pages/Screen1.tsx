@@ -21,7 +21,7 @@ export const Screen1: React.FC = () => {
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-8">Screen 1</h1>
       <div className="flex mb-4">
-        <input className="p-2 border rounded-md w-full" type="text" value={inputValue} onChange={handleInputChange} />
+        <input className="p-2 border rounded-md w-full" type="text" value={inputValue} onChange={handleInputChange} required/>
       </div>
       <button className="bg-blue-500 text-white p-2 rounded-md" onClick={handleSubmit}>
         Submit
