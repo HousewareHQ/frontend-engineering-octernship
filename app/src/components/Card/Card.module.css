@@ -1,0 +1,40 @@
+.card {
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    /* padding: 10px; */
+    background-color: rgb(255, 255, 255);
+
+    width: 10%;
+    /* height:500px; */
+    /* margin: 10px auto; */
+    max-width: var(--max-width);
+
+
+    /* border-radius: 11px;
+    background: linear-gradient(0deg, #ffffff, #e6e6e6);
+    box-shadow: 6px 6px 12px #e3e3e3,
+        -6px -6px 12px #ffffff; */
+
+}
+
+/* @media (max-width: 450px) {
+    .card {
+        width: 65vw;
+    }
+} */
+
+/* .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+} */
+
+/* @media only screen and (max-width: 400px) {
+    .card{
+        width: 80vw;
+    }
+} */
