@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import CharacterCard from "../components/CharacterCard";
 
@@ -47,14 +47,18 @@ export const Screen2 = () => {
       if(newVal[char].idx.length > 1) {
         newVal[char].idx = [newVal[char].idx[0]]
       }
-      else {
-        // push this character to charsAlreadyOne
-        setCharsAlreadyOne(prev => [...prev, char])
-      }
+      // push this character to charsAlreadyOne
+      setCharsAlreadyOne(prevChar => [...prevChar, char])
+      
       return newVal
     })
-    
   };
+
+  useEffect(() => {
+    console.log('charsAlreadyOne', charsAlreadyOne)
+    console.log('inpMap length', Object.keys(inpMap).length, 'charsAlreadyOne length', charsAlreadyOne.length)
+
+  }, [charsAlreadyOne])
 
   return (
     <div className="container mx-auto">
