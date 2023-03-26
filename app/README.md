@@ -26,20 +26,21 @@ Note:
 ## Requirement checks
 
 - [x] The user shouldn't be allowed to go to screen 2 without providing a non-empty value in the input field on screen 1.
-![](https://s1.webmshare.com/9xED4.webm)
+[![Watch the video](https://user-images.githubusercontent.com/113872927/227759036-b34024b3-81a1-4682-9d50-764a9c7350a1.png)](https://s1.webmshare.com/9xED4.webm)
 - [x] On Screen 2, clicking on a card delete icon should delete all other appearance of the character in the string. 
 - [x] The cards shown on the screen should also be updated. 
   - [x] Let's say if the original string is `aabcaccda`. Clicking on the first `a` should leave the string as `abcccd`. 
   - [x] Let's say the original string is `baebdeb`. Clicking on the character `b` at index 3 (0 index), should result in `aebde`.
+  [![Watch the video](https://user-images.githubusercontent.com/113872927/227759065-3ab177ce-c46e-4dba-817c-63652edfc5b6.png)](https://s1.webmshare.com/N79wg.webm)
 - [x] Once all the duplicate appearances in the string are removed, the user should see a success header with the original string & the resultant string.
-![](https://s1.webmshare.com/N79wg.webm)
+![screen2_2](https://user-images.githubusercontent.com/113872927/227759148-6076b1b0-05eb-4782-ac85-1ccd8e644fdc.png)
 - [x] The project should be written in JS or Typescript with React. Feel free to use any component library, any other packages, css libraries etc. (used Vite + React Typescript + TailwindCSS)
 - [x] *Your time is better utilised solving the actual problem rather than re-inventing the wheel.* (used ChatGPT and Github copilot to make fast prototype)
 - [x] Make sure you do write a readme & a PR description on how to run the project locally.
 
 ## Aditional Features.
-[x] When Screen2 accessed by the url and user didn't provide any string param, then the app automatically redirect it to 404 page.
-[x] In Screen2, I add logic to hide delete button if any char already 1 left.
+- [x] When Screen2 accessed by the url and user didn't provide any string param, then the app automatically redirect it to 404 page.
+- [x] In Screen2, I add logic to hide delete button if any char already 1 left.
 
 ## Available Scripts
 
