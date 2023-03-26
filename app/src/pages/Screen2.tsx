@@ -61,8 +61,8 @@ export const Screen2 = () => {
   }, [charsAlreadyOne])
 
   return (
-    <div className="flex items-center justify-center font-inter min-h-screen bg-gradient-to-tr from-blue-300 via-emerald-400 to-indigo-200">
-      <div className="container bg-zinc-900/70 text-white p-8 shadow-md shadow-zinc-700 border-zinc-600 border-2 rounded-lg selection:bg-emerald-400/40">
+    <div className="relative flex items-center justify-center font-inter min-h-screen bg-gradient-to-tr from-blue-300 via-emerald-400 to-indigo-200 text-white">
+      <div className="container bg-zinc-900/70  p-8 shadow-md shadow-zinc-700 border-zinc-600 border-2 rounded-lg selection:bg-emerald-400/40">
         <div className="flex flex-col items-center justify-center">
           <h1 className="self-start text-5xl font-semibold mb-6">Screen 2</h1>
           <p className="self-start font-medium mb-2">Your input: {inputValue}</p>
@@ -90,6 +90,9 @@ export const Screen2 = () => {
           </button>
         </div>
       </div>
+      <a href="https://github.com/doaortu/frontend-engineering-octernship-doaortu-fork" className='absolute bottom-0 right-0 text-center p-3 m-2 bg-zinc-900 hover:bg-zinc-800 font-bold'>
+        @doaortu
+      </a>
     </div>
   );
 }
