@@ -1,3 +1,6 @@
+# LIVE LINK
+https://duplr.vercel.app/
+
 # frontend-engineering-octernship
 ### Packages used
  react-icons :"for delete icon"
