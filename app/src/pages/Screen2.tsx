@@ -40,12 +40,12 @@ export const Screen2 = () => {
     navigate('/');
   };
 
-  const handleDelete = (char: string) => {
+  const handleDelete = (char: string, index: number) => {
     setInpMap(prev => {
       // leave one index for this character
       let newVal = {...prev}
       if(newVal[char].idx.length > 1) {
-        newVal[char].idx = [newVal[char].idx[0]]
+        newVal[char].idx = [index]
       }
       // push this character to charsAlreadyOne
       setCharsAlreadyOne(prevChar => [...prevChar, char])
@@ -79,7 +79,7 @@ export const Screen2 = () => {
                 return <CharacterCard
                   className="w-28 rounded-md"
                   key={i} character={char}
-                  onDelete={() => handleDelete(char)}
+                  onDelete={() => handleDelete(char, i)}
                   haveDuplicates={inpMap[char].idx.length > 1}
                   backgroundColor={inpMap[char]?.backgroundColor}/>
               }
