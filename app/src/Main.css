@@ -1,0 +1,100 @@
+/* Screen 1 -------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #root{
+    max-width: 900px; 
+   
+    margin: 0 auto;
+} */
+
+.mainForm {
+    background-color: aqua;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 260px auto;
+
+}
+
+.mainForm p {
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 10px;
+    /* top | right | bottom | left */
+    padding: 0 0 1rem .15em;
+}
+
+.mainForm input {
+    padding: 10px;
+}
+
+.mainForm button {
+    padding: 10px;
+}
+
+.Screen2 {
+    background-color: rgb(23, 71, 71);
+    height: 90%;
+    margin: 130px;
+
+}
+
+.charCard {
+    height: 113px;
+    width: 113px;
+    margin: 20px;
+    border: 2px solid black;
+    font-size: 40px;
+}
+
+.content h2 {
+    text-align: center;
+    padding: 30px;
+ padding:15px 0 15px 0;
+ 
+}
+
+
+.charCard .deletBtn {
+    position: relative;
+    /* top: 10px; */
+    /* right: 10px; */
+    background-color: rgb(3, 3, 3);
+    color: white;
+    border: none;
+    padding: 5px 13px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.charCard span {
+    padding: 30px;
+
+}
+
+.screenCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 180vh;
+}
+
+.Screen2 .backBtn {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
