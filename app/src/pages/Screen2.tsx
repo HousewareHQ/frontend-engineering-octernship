@@ -54,12 +54,6 @@ export const Screen2 = () => {
     })
   };
 
-  useEffect(() => {
-    console.log('charsAlreadyOne', charsAlreadyOne)
-    console.log('inpMap length', Object.keys(inpMap).length, 'charsAlreadyOne length', charsAlreadyOne.length)
-
-  }, [charsAlreadyOne])
-
   return (
     <div className="relative flex items-center justify-center font-inter min-h-screen bg-gradient-to-tr from-blue-300 via-emerald-400 to-indigo-200 text-white">
       <div className="container bg-zinc-900/70  p-8 shadow-md shadow-zinc-700 border-zinc-600 border-2 rounded-lg selection:bg-emerald-400/40">
