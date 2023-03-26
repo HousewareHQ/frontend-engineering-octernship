@@ -60,10 +60,10 @@ http://localhost:3000
 -  Users are not allowed to go to page 2 without providing a non-empty value in the input field on Page 1.
 - All letter cards with the same character have the same background color.
 - The container is nicely styled with a modern design, and each letter card has a hover effects.
-- When User Clicked on a card delete icon on deletes all other appearances of the character in the string, except the one that is clicked.
+- When User Clicked on a card delete icon on deletes all other appearances of that character in the string, except the one that is clicked.
 - This header appears when there are no more characters with greater than 1 appearance
 - User have opction to GoBack by clicking Go Back button.
-- The app is completely responsive and can be used on mobile phones as well.
+- The app is completely responsive and can be used on mobile phones also.
  
  </h3>
 
@@ -98,7 +98,7 @@ https://user-images.githubusercontent.com/122713145/227333961-4fe99660-eff8-43fc
 
 
 
-# 🎨 Additional futures 
+# 🎨 Responsiveness futures : 
 
 
 ![Screenshot (46)](https://user-images.githubusercontent.com/122713145/227493337-41a5318f-a9ff-419e-82a5-7c43f04312a6.png)
