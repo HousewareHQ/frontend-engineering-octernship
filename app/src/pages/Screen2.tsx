@@ -23,8 +23,8 @@ export const Screen2 = () => {
         inpMapTemp[char].idx.push(idx)
       } else {
         inpMapTemp[char] = {
-          // only randomize bright color
-          backgroundColor: `hsl(${Math.random() * 360}, 100%, 55%)`,
+          // only randomize primary color (red, green, blue, etc) but with opacity
+          backgroundColor: `hsla(${Math.floor(Math.random() * 360)}, 100%, 50%, 0.7)`,
           idx: [idx]
         }
       }
@@ -61,29 +61,34 @@ export const Screen2 = () => {
   }, [charsAlreadyOne])
 
   return (
-    <div className="container mx-auto">
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl mb-6">Screen 2</h1>
-        <p className="mb-4">Your input: {inputValue}</p>
-        <p className="mb-4">Current string: {
-          // filter out characters that isn't in inpMap (that has been filtered out by delete button)
-          inputValue.split('').filter((char, i) => inpMap[char]?.idx.includes(i)).join('')
-        }</p>
-        {charsAlreadyOne.length == Object.keys(inpMap).length && <p className="mb-4">You have removed all duplicate characters!</p>}
-        <div className="mb-4 grid grid-cols-8 gap-2 w-full">
-          {inputValue.split('').map((char, i) => {
-            if(inpMap[char]?.idx.includes(i)) {
-              return <CharacterCard 
-                key={i} character={char} 
-                onDelete={() => handleDelete(char)} 
-                haveDuplicates={inpMap[char].idx.length > 1}
-                backgroundColor={inpMap[char]?.backgroundColor}/>
-            }
-          })}
+    <div className="flex items-center justify-center font-inter min-h-screen bg-gradient-to-tr from-blue-300 via-emerald-400 to-indigo-200">
+      <div className="container bg-zinc-900/70 text-white p-8 shadow-md shadow-zinc-700 border-zinc-600 border-2 rounded-lg selection:bg-emerald-400/40">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="self-start text-5xl font-semibold mb-6">Screen 2</h1>
+          <p className="self-start font-medium mb-2">Your input: {inputValue}</p>
+          <p className="self-start font-medium mb-4">Current string: {
+            // filter out characters that isn't in inpMap (that has been filtered out by delete button)
+            inputValue.split('').filter((char, i) => inpMap[char]?.idx.includes(i)).join('')
+          }</p>
+          {charsAlreadyOne.length == Object.keys(inpMap).length && 
+            <p className="p-4 bg-green-500/70 rounded-md mb-4 font-medium text-lg">You have removed all the duplicate characters!</p>
+          }
+          <div className="mb-4 flex flex-wrap gap-2 w-full">
+            {inputValue.split('').map((char, i) => {
+              if(inpMap[char]?.idx.includes(i)) {
+                return <CharacterCard
+                  className="w-28 rounded-md"
+                  key={i} character={char}
+                  onDelete={() => handleDelete(char)}
+                  haveDuplicates={inpMap[char].idx.length > 1}
+                  backgroundColor={inpMap[char]?.backgroundColor}/>
+              }
+            })}
+          </div>
+          <button className="bg-zinc-800/70 hover:bg-zinc-800/90 shadow-sm text-lg py-2 px-4 rounded mt-4" onClick={handleBack}>
+            Back
+          </button>
         </div>
-        <button className="bg-gray-500 text-white py-2 px-4 rounded mt-4" onClick={handleBack}>
-          Back
-        </button>
       </div>
     </div>
   );

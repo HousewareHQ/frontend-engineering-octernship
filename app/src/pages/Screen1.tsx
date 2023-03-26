@@ -18,14 +18,16 @@ export const Screen1: React.FC = () => {
   };
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-8">Screen 1</h1>
-      <div className="flex mb-4">
-        <input className="p-2 border rounded-md w-full" type="text" value={inputValue} onChange={handleInputChange} required/>
+    <div className="font-inter flex flex-col justify-center items-center min-h-screen bg-gradient-to-tr from-blue-300 via-emerald-400 to-indigo-200" >
+      <div className="flex flex-col items-center lg:w-1/3 md:w-2/3 bg-zinc-900/70 text-white p-8 shadow-md shadow-zinc-700 border-zinc-600 border-2 rounded-lg selection:bg-emerald-400/40">
+        <h1 className="text-3xl font-bold mb-8">Screen 1</h1>
+        <div className="flex mb-4 w-full">
+          <input className="p-4 rounded-md w-full bg-zinc-900/30 outline-none text-xl" type="text" value={inputValue} onChange={handleInputChange} required/>
+        </div>
+        <button className="bg-emerald-400/70 p-2 hover:bg-emerald-400/60 rounded-md" onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
-      <button className="bg-blue-500 text-white p-2 rounded-md" onClick={handleSubmit}>
-        Submit
-      </button>
     </div>
   );
 };
