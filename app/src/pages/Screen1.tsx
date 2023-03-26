@@ -22,7 +22,7 @@ export const Screen1: React.FC = () => {
       <div className="flex flex-col items-center lg:w-1/3 md:w-2/3 bg-zinc-900/70  p-8 shadow-md shadow-zinc-700 border-zinc-600 border-2 rounded-lg selection:bg-emerald-400/40">
         <h1 className="text-3xl font-bold mb-8">Screen 1</h1>
         <div className="flex mb-4 w-full">
-          <input className="p-4 rounded-md w-full bg-zinc-900/30 outline-none text-xl" type="text" value={inputValue} onChange={handleInputChange} required/>
+          <input className="p-4 rounded-md w-full bg-zinc-900/30 outline-none text-xl" type="text" value={inputValue} onChange={handleInputChange} required aria-label="Search input"/>
         </div>
         <button className="bg-emerald-400/70 p-2 hover:bg-emerald-400/60 rounded-md" onClick={handleSubmit}>
           Submit
