@@ -25,17 +25,17 @@ Note:
 
 ## Requirement checks
 
-[x] The user shouldn't be allowed to go to screen 2 without providing a non-empty value in the input field on screen 1.
+- [x] The user shouldn't be allowed to go to screen 2 without providing a non-empty value in the input field on screen 1.
 https://s1.webmshare.com/9xED4.webm
-[x] On Screen 2, clicking on a card delete icon should delete all other appearance of the character in the string. 
-[x] The cards shown on the screen should also be updated. 
-  [x] Let's say if the original string is `aabcaccda`. Clicking on the first `a` should leave the string as `abcccd`. 
-  [x] Let's say the original string is `baebdeb`. Clicking on the character `b` at index 3 (0 index), should result in `aebde`.
-[x] Once all the duplicate appearances in the string are removed, the user should see a success header with the original string & the resultant string.
+- [x] On Screen 2, clicking on a card delete icon should delete all other appearance of the character in the string. 
+- [x] The cards shown on the screen should also be updated. 
+  - [x] Let's say if the original string is `aabcaccda`. Clicking on the first `a` should leave the string as `abcccd`. 
+  - [x] Let's say the original string is `baebdeb`. Clicking on the character `b` at index 3 (0 index), should result in `aebde`.
+- [x] Once all the duplicate appearances in the string are removed, the user should see a success header with the original string & the resultant string.
 https://s1.webmshare.com/N79wg.webm
-[x] The project should be written in JS or Typescript with React. Feel free to use any component library, any other packages, css libraries etc. (used Vite + React Typescript + TailwindCSS)
-[x] *Your time is better utilised solving the actual problem rather than re-inventing the wheel.* (used ChatGPT and Github copilot to make fast prototype)
-[x] Make sure you do write a readme & a PR description on how to run the project locally.
+- [x] The project should be written in JS or Typescript with React. Feel free to use any component library, any other packages, css libraries etc. (used Vite + React Typescript + TailwindCSS)
+- [x] *Your time is better utilised solving the actual problem rather than re-inventing the wheel.* (used ChatGPT and Github copilot to make fast prototype)
+- [x] Make sure you do write a readme & a PR description on how to run the project locally.
 
 ## Aditional Features.
 [x] When Screen2 accessed by the url and user didn't provide any string param, then the app automatically redirect it to 404 page.
