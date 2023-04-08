@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect ,useCallback} from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import "./page2.css";
@@ -20,14 +20,22 @@ export const Page2 = () => {
     const [currentString, setCurrentString] = useState("");
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-    const getFilteredIndexes = (value, index) => {
+    // const getFilteredIndexes = (value, index) => {
+    //     return inputArray.map((val, id) => {
+    //         if (value.toLowerCase() === val.toLowerCase() && index !== id) {
+    //             return true;
+    //         }
+    //         return false;
+    //     });
+    // };
+    const getFilteredIndexes = useCallback((value, index) => {
         return inputArray.map((val, id) => {
             if (value.toLowerCase() === val.toLowerCase() && index !== id) {
                 return true;
             }
             return false;
         });
-    };
+    }, [inputArray]);
 
     const handleGoBack = () => {
         navigate('/page1');
